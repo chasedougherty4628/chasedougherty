@@ -30,6 +30,44 @@ Ruby Code
 [Link](url) and ![Image](src)
 ```
 
+### Google Maps API with VUE and Javascript
+```markdown
+Syntax highlighted code block
+
+# Header 1
+
+- Bulleted
+- List
+
+Ruby Code
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
+
+### User info stored everytime user enters in information
+```markdown
+Syntax highlighted code block
+
+# Header 1
+
+- Bulleted
+- List
+
+Ruby Code
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
+
 ### Support or Contact
 
 You can email me at chasekaneki@gmail.com for recommendations or for assistance. 
