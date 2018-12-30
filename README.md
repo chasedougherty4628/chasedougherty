@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
+Welcome to My Materials
 
-You can use the [editor on GitHub](https://github.com/chasedougherty4628/chasedougherty/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The purpose of this page is to demonstrate different features I have implemented. Maybe you're here to see if I am talented enough to help you, or maybe you're here to get my help. Either way, I am happy to have you here and I hope you are able to feasibly work your way through the page. 
 
 ### Markdown
 
