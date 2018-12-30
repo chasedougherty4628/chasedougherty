@@ -18,6 +18,8 @@ Syntax highlighted code block
 - Bulleted
 - List
 
+Ruby Code
+
 1. Numbered
 2. List
 
