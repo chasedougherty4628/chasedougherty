@@ -188,42 +188,103 @@ end`
 
 ```
 
-### Google Maps API with VUE and Javascript
+### Saving Data to database for data analysis 
 ```markdown
-Syntax highlighted code block
 
-# Header 1
+# routes.rb
+  post '/saveUserSearch', to: 'maps#save_search'
 
-- Bulleted
-- List
+  get '/userSearches', to: 'maps#show_searches'
 
-Ruby Code
+  get '/deleteSearch/:id', to: 'maps#destroy_search'
+  
+# Add Table with Migration
+  create_table "users_searches", force: :cascade do |t|
+    t.string "address"
+    t.string "state"
+    t.string "choice_of_search"
+    t.string "range"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+  
+# Grab data and make AJAX call with it from your js file
+saveSearch = function savingUserSearchInfoEveryTime(address, state, choice, range) {
+  var userSearchData = {
+    address: address,
+    state: state,
+    choiceOfSearch: choice,
+    range: range
+  }
 
-1. Numbered
-2. List
+  $.ajax({
+    type: "POST",
+    url: "/saveUserSearch",
+    data: userSearchData,
+    success: function (data) {
+      console.log("saved the search information");
+    },
+    error: function (data) {
+      console.log("Did not save the search");
+    }
+  });
+}
 
-**Bold** and _Italic_ and `Code` text
+# Create save , show, and delete ability in controller, my instance is the maps controller
+  def save_search
+    puts "Nice, the AJAX call made it to this function. Now you can feasibly save"
+    search = UsersSearch.new
+    search.address = params[:address]
+    search.state = params[:state]
+    search.choice_of_search = params[:choice_of_search] || "Adjuster"
+    search.range = params[:range]
+    if search.save
+      puts "Successfully Saving"
+    else
+      puts "There was an error with that search result saving"
+    end
+  end
+  
+  def show_searches
+    @searchData = UsersSearch.all
+  end
 
-[Link](url) and ![Image](src)
-```
+  def destroy_search
+    @users_search = UsersSearch.find(params[:id])
+    @users_search.destroy
+    redirect_to '/userSearches'
+    flash[:alert] = "Successfully Deleted"
+  end
 
-### User info stored everytime user enters in information
-```markdown
-Syntax highlighted code block
+# Add the table to a view and you're all done
 
-# Header 1
+  `<table id='mySearchTable' style="width:100%;">
+    <thead>
+      <tr>
+        <th>Address</th>
+        <th>Range</th>
+        <th>Type</th>
+        <th>Range</th>
+        <th>Modify?</th>
+      </tr>
+    </thead>
 
-- Bulleted
-- List
+    <tbody>
+      <% @searchData.each do |data| %>
+      <tr>
+        <td><%= data.address %></td>
+        <td><%= data.state %></td>
+        <td><%= data.choice_of_search %></td>
+        <td><%= data.range %></td>
+        <td><%= link_to 'Delete', controller: "maps", action: 'destroy_search', id: data%></td>
+        <%end%>
+      </tr>
+    </tbody>
+  </table>`
+      
+ # Finally add the route to your navigation dropdowns so user can access the data
+`<li><a href="/userSearches">Search Data</a></li>`
 
-Ruby Code
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
 ### Support or Contact
