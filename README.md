@@ -23,7 +23,6 @@ gem 'activerecord-session_store'
 
 # Generate a application.yml using figaro gem
 # Create okta developer account, grab your url from dashboard in top right, and grab your id and secret from the project
-
 OKTA_CLIENT_ID: "0oain4bcexamplethatwillnotworkforyouACshj0h7"
 OKTA_CLIENT_SECRET: "Qu0qov5lZ2KJp8W_i0examplethatwillnotworkforyousroLEjHq71I"
 OKTA_ORG: "dev-435540" Comes from url
@@ -145,7 +144,6 @@ devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks'
   end`
   
 # application_controller.rb
-  
   `protect_from_forgery with: :exception
   add_flash_types :success
 
@@ -161,7 +159,6 @@ devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks'
   end`
 
 # Create a users folder and create omniauth_callbacks_controller.rb
-
 `class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def oktaoauth
     # You need to implement the method below in your model (e.g. app/models/user.rb)
@@ -257,7 +254,6 @@ saveSearch = function savingUserSearchInfoEveryTime(address, state, choice, rang
   end
 
 # Add the table to a view and you're all done
-
   `<table id='mySearchTable' style="width:100%;">
     <thead>
       <tr>
@@ -292,6 +288,7 @@ saveSearch = function savingUserSearchInfoEveryTime(address, state, choice, rang
 
 Javascript is great, but every now and then using underscore can give an extra kick
 Here is the initial Javascript method that is grabbing the state from a string
+
 # 422 Cedar Glen Dr #3, Fort Wayne, IN 46825, USA => I need IN
 # Alabama
 `filterOutState = function takesUserAddressandSetsState() {
