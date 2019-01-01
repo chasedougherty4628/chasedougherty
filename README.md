@@ -188,7 +188,7 @@ end`
 
 ```
 
-### Saving Data to database for data analysis 
+### Saving data to database for data analysis 
 ```markdown
 
 # routes.rb
@@ -285,6 +285,60 @@ saveSearch = function savingUserSearchInfoEveryTime(address, state, choice, rang
  # Finally add the route to your navigation dropdowns so user can access the data
 `<li><a href="/userSearches">Search Data</a></li>`
 
+```
+
+### Improving javascript speed and readability using underscore
+```markdown
+
+Javascript is great, but every now and then using underscore can give an extra kick
+Here is the initial Javascript method that is grabbing the state from a string
+# 422 Cedar Glen Dr #3, Fort Wayne, IN 46825, USA => I need IN
+# Alabama
+`filterOutState = function takesUserAddressandSetsState() {
+  console.time("filterOutState");
+  maps.userState = 'empty';
+  stateFromUser = maps.addressInput.replace(/,/g, '');
+  stateFromUser = stateFromUser.split(' ');
+
+  stateFromUser.forEach((word) => {
+    StatesArray.forEach((state) => {
+      if (state === word) {
+        maps.userState = word;
+      }
+    });
+  });
+  if(maps.userState == 'empty'){
+    filterOutStateHelper();
+  }
+  console.timeEnd("filterOutState");
+};`
+
+filterOutState: 0.1181640625ms
+
+# By adding backbone and stringing methods together the speed and readability was increased drastically 
+`filterOutState = function takesUserAddressandSetsState() {
+  stateFromUser = maps.addressInput.replace(/,/g, '').split(' ');
+  maps.userState = _.intersection(stateFromUser, StatesArray);
+  if(_.isEmpty(maps.userState)) {
+    filterOutStateHelper();
+  }
+};`
+
+filterOutState: 0.07373046875ms
+
+# The helper method ran if there was no state found can also be improved
+# Initial method
+`filterOutStateHelper = function findsStateIfUserStateIsEmpty() {
+  stateFromUser = maps.addressInput.split(',');
+  stateFromUser.forEach((word) => {
+    if (StatesHash[word] != undefined) {
+      maps.userState = StatesHash[word];
+    }
+  });
+};`
+
+# Improved method
+`maps.userState = StatesHash[_.first(maps.addressInput.split(','))];`
 ```
 
 ### Support or Contact
