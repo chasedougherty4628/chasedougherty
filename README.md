@@ -10,7 +10,10 @@ The knowledge I took from my degrees has improved a variety of skills. I worked 
 
 
 ### Google Maps Project
-
+#### Part 1
+https://www.youtube.com/watch?v=ni_1C1CCPZ8&feature=youtu.be
+#### Part 2
+https://www.youtube.com/watch?v=DWqzR6j-2Lc&feature=youtu.be
 
 This project has several unique aspects to it. Each one has a little code preview below. You can check out a code review of project without the changes with the link above. It's a ruby on rails project design by me. The entire code isn't on the project to protect design.
 1. Implementation of Okta for single user sign-on 
