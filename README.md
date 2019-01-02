@@ -10,9 +10,9 @@ The knowledge I took from my degrees has improved a variety of skills. I worked 
 
 
 ### Google Maps Project
-https://github.com/chasedougherty4628/HelloWorld
 
-This project has several unique aspects to it. Each one has a little code preview below. You can check out the full project with the link above. It's a ruby on rails project design by me. The entire code isn't on the project to protect design.
+
+This project has several unique aspects to it. Each one has a little code preview below. You can check out a code review of project without the changes with the link above. It's a ruby on rails project design by me. The entire code isn't on the project to protect design.
 1. Implementation of Okta for single user sign-on 
 2. Javascript implemented with Vue using the Google Maps API for the project
 3. Active Record usage to store user search information for data analysis 
