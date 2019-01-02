@@ -1,5 +1,3 @@
-## Welcome to My Materials
-
 ## Professional Assessment
 
 After completing a business and software engineering degree with SNHU (Southern New Hampshire University) there were a myriad of aspects I learned. I focused on applicable knowledge rather than theoretical. I want to make an impact where I go in the future. This is the reason I learned how to build RESTful API with python script on a Mongo database. I learned how to make android applications. I learned C++ to understand the foundation of coding.
