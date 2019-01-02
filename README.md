@@ -2,9 +2,11 @@
 
 ## Professional Assessment
 
-	After completing a business and software engineering degree with SNHU (Southern New Hampshire University) there were a myriad of aspects I learned. I focused on applicable knowledge rather than theoretical. I want to make an impact where I go in the future. This is the reason I learned how to build RESTful API with python script on a Mongo database. I learned how to make android applications. I learned C++ to understand the foundation of coding. 
-	My favorite aspect of coding was frontend work. I highly enjoyed Ruby on Rails with JavaScript. The best application I worked on was my Google Maps API. I created an ePortfolio showcasing the skill I developed that were unique form the project. I was able to work with underscore JS to improve the JavaScript algorithms in the project. I used Devise to make an OAuth call to OKTA for single sign on. I also saved user search data for data analysis by making AJAX call to the Rails controller. 
-	The knowledge I took from my degrees has improved a variety of skills. I worked in team environments to review each other’s code and help write model tests. I did numerous presentations over marketing value towards different products and how to properly grab the right market. I worked on data analysis and reports using different algorithms to pull the right information. I set up databases for android, Rails, and other systems with Postgres, Mongo, and SQLite. Hopefully the code below will give you a taste of some of the skills I developed throughout my time at SNHU. 
+After completing a business and software engineering degree with SNHU (Southern New Hampshire University) there were a myriad of aspects I learned. I focused on applicable knowledge rather than theoretical. I want to make an impact where I go in the future. This is the reason I learned how to build RESTful API with python script on a Mongo database. I learned how to make android applications. I learned C++ to understand the foundation of coding.
+
+My favorite aspect of coding was frontend work. I highly enjoyed Ruby on Rails with JavaScript. The best application I worked on was my Google Maps API. I created an ePortfolio showcasing the skill I developed that were unique form the project. I was able to work with underscore JS to improve the JavaScript algorithms in the project. I used Devise to make an OAuth call to OKTA for single sign on. I also saved user search data for data analysis by making AJAX call to the Rails controller. 
+
+The knowledge I took from my degrees has improved a variety of skills. I worked in team environments to review each other’s code and help write model tests. I did numerous presentations over marketing value towards different products and how to properly grab the right market. I worked on data analysis and reports using different algorithms to pull the right information. I set up databases for android, Rails, and other systems with Postgres, Mongo, and SQLite. Hopefully the code below will give you a taste of some of the skills I developed throughout my time at SNHU. 
 
 
 ### Google Maps Project
@@ -14,7 +16,6 @@ This project has several unique aspects to it. Each one has a little code previe
 1. Implementation of Okta for single user sign-on 
 2. Javascript implemented with Vue using the Google Maps API for the project
 3. Active Record usage to store user search information for data analysis 
-
 
 ### OKTA
 ```markdown
